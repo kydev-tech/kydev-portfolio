@@ -93,10 +93,9 @@ const languages = {
       wordDesc: 'Pengolah kata untuk dokumentasi profesional',
       excelDesc: 'Spreadsheet untuk analisis data dan perhitungan',
       
-      // Skill Levels
+      // Skill Levels (Updated - No more percentages!)
       expert: 'Ahli',
-      advanced: 'Lanjutan',
-      intermediate: 'Menengah',
+      medium: 'Menengah',
       beginner: 'Pemula',
       
       // Experience Section
@@ -138,7 +137,7 @@ const languages = {
       administrativeAssistantMachineOperator: 'Administrative Assistant & Machine Operator',
       december2023September2024: 'Desember 2023 - September 2024',
       tenMonths: '10 bulan',
-      ptsviRAResponsibilities: [
+      ptInsviRResponsibilities: [
         'Membantu pekerjaan karyawan sebagai helper',
         'Melakukan pembelian dan pengelolaan kebutuhan karyawan',
         'Mengelola dan mengatur stok barang',
@@ -146,7 +145,7 @@ const languages = {
         'Membantu pengelolaan administrasi keuangan PT'
       ],
       ptInsviRAchievements: [
-        'Berhasil mengelola inventory dengan akurasi 98%',
+        'Berhasil mengelola inventory dengan akurasi tinggi',
         'Meningkatkan efisiensi operasional mesin laser',
         'Mempelajari sistem administrasi perusahaan',
         'Berkontribusi dalam pengelolaan keuangan perusahaan'
@@ -311,10 +310,9 @@ const languages = {
       wordDesc: 'Word processor for professional documentation',
       excelDesc: 'Spreadsheet for data analysis and calculations',
       
-      // Skill Levels
+      // Skill Levels (Updated - No more percentages!)
       expert: 'Expert',
-      advanced: 'Advanced',
-      intermediate: 'Intermediate',
+      medium: 'Medium',
       beginner: 'Beginner',
       
       // Experience Section
@@ -356,7 +354,7 @@ const languages = {
       administrativeAssistantMachineOperator: 'Administrative Assistant & Machine Operator',
       december2023September2024: 'December 2023 - September 2024',
       tenMonths: '10 months',
-      ptInsviRAResponsibilities: [
+      ptInsviRResponsibilities: [
         'Assist employees as helper',
         'Purchase and manage employee needs',
         'Manage and organize inventory',
@@ -364,7 +362,7 @@ const languages = {
         'Assist in company financial administration'
       ],
       ptInsviRAchievements: [
-        'Successfully managed inventory with 98% accuracy',
+        'Successfully managed inventory with high accuracy',
         'Improved laser machine operational efficiency',
         'Learned company administration systems',
         'Contributed to company financial management'
@@ -529,10 +527,9 @@ const languages = {
       wordDesc: 'プロフェッショナルドキュメント作成のためのワードプロセッサ',
       excelDesc: 'データ分析と計算のためのスプレッドシート',
       
-      // Skill Levels
+      // Skill Levels (Updated - No more percentages!)
       expert: 'エキスパート',
-      advanced: '上級',
-      intermediate: '中級',
+      medium: '中級',
       beginner: '初心者',
       
       // Experience Section

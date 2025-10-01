@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp, Heart, Github, Linkedin, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 
-const Footer = ({ 
-  isDarkMode = false, 
-  currentLanguage = 'id', 
-  translations = {} 
+const Footer = ({
+  isDarkMode = false,
+  currentLanguage = 'id',
+  translations = {}
 }) => {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -60,24 +60,21 @@ const Footer = ({
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300 transform ${
-          showScrollTop 
-            ? 'translate-y-0 opacity-100 scale-100' 
-            : 'translate-y-16 opacity-0 scale-0'
-        } ${
-          isDarkMode
+        className={`fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300 transform ${showScrollTop
+          ? 'translate-y-0 opacity-100 scale-100'
+          : 'translate-y-16 opacity-0 scale-0'
+          } ${isDarkMode
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
             : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
-        } hover:scale-110 group`}
+          } hover:scale-110 group`}
       >
         <ArrowUp size={24} className="transition-transform duration-300 group-hover:-translate-y-1" />
-        
+
         {/* Ripple effect */}
-        <div className={`absolute inset-0 rounded-full animate-ping opacity-20 ${
-          isDarkMode
-            ? 'bg-gradient-to-r from-blue-600 to-purple-600'
-            : 'bg-gradient-to-r from-blue-500 to-purple-500'
-        }`}></div>
+        <div className={`absolute inset-0 rounded-full animate-ping opacity-20 ${isDarkMode
+          ? 'bg-gradient-to-r from-blue-600 to-purple-600'
+          : 'bg-gradient-to-r from-blue-500 to-purple-500'
+          }`}></div>
       </button>
 
       {/* Footer */}
@@ -89,9 +86,8 @@ const Footer = ({
             <svg
               viewBox="0 0 1200 120"
               preserveAspectRatio="none"
-              className={`w-full h-20 md:h-32 ${
-                isDarkMode ? 'text-slate-900' : 'text-gray-900'
-              }`}
+              className={`w-full h-20 md:h-32 ${isDarkMode ? 'text-slate-900' : 'text-gray-900'
+                }`}
             >
               <defs>
                 <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -100,7 +96,7 @@ const Footer = ({
                   <stop offset="100%" stopColor={isDarkMode ? '#1e293b' : '#111827'} />
                 </linearGradient>
               </defs>
-              
+
               {/* Multiple wave layers for depth */}
               <path
                 fill="url(#waveGradient)"
@@ -114,7 +110,7 @@ const Footer = ({
                   repeatCount="indefinite"
                 />
               </path>
-              
+
               <path
                 fill="url(#waveGradient)"
                 fillOpacity="0.5"
@@ -127,7 +123,7 @@ const Footer = ({
                   repeatCount="indefinite"
                 />
               </path>
-              
+
               <path
                 fill="currentColor"
                 d="M0,100 Q300,60 600,100 T1200,100 V120 H0 Z"
@@ -144,12 +140,11 @@ const Footer = ({
         </div>
 
         {/* Footer Content */}
-        <div className={`${
-          isDarkMode
-            ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900'
-            : 'bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900'
-        } text-white relative`}>
-          
+        <div className={`${isDarkMode
+          ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900'
+          : 'bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900'
+          } text-white relative`}>
+
           {/* Decorative dots */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
@@ -159,10 +154,10 @@ const Footer = ({
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            
+
             {/* Main Footer Content */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-              
+
               {/* About Section */}
               <div className="lg:col-span-2">
                 <div className="mb-6">
@@ -172,7 +167,7 @@ const Footer = ({
                   <p className="text-gray-300 leading-relaxed mb-6">
                     {t('footerDescription')}
                   </p>
-                  
+
                   {/* Social Links */}
                   <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
@@ -185,7 +180,7 @@ const Footer = ({
                         className="group relative p-3 rounded-full bg-gradient-to-r from-slate-800 to-slate-700 hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110"
                       >
                         <social.icon size={20} className="text-gray-300 group-hover:text-white transition-colors duration-300" />
-                        
+
                         {/* Tooltip */}
                         <span className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                           {social.label}
@@ -269,7 +264,7 @@ const Footer = ({
 
             {/* Bottom Section */}
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              
+
               {/* Copyright */}
               <div className="text-center md:text-left">
                 <p className="text-gray-400 text-sm flex items-center justify-center md:justify-start">
@@ -281,10 +276,10 @@ const Footer = ({
 
               {/* Additional Links */}
               <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                <a href="/privacy-policy" className="text-gray-400 hover:text-blue-400...">
                   {t('privacyPolicy')}
                 </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                <a href="/terms-of-service" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                   {t('termsOfService')}
                 </a>
               </div>

@@ -12,12 +12,38 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
     return translations[currentLanguage].translations[key] || key;
   };
 
-  // Get skill level label based on language
-  const getSkillLevelLabel = (level) => {
-    if (level >= 90) return t('expert') || 'Expert';
-    if (level >= 80) return t('advanced') || 'Advanced';
-    if (level >= 70) return t('intermediate') || 'Intermediate';
-    return t('beginner') || 'Beginner';
+  // Get skill level styling
+  const getSkillLevelStyle = (level) => {
+    switch (level) {
+      case 'Expert':
+        return {
+          badge: isDarkMode 
+            ? 'bg-green-500/20 text-green-400 border-green-500/30' 
+            : 'bg-green-100 text-green-700 border-green-300',
+          gradient: isDarkMode ? 'from-green-400 to-emerald-500' : 'from-green-500 to-emerald-600'
+        };
+      case 'Medium':
+        return {
+          badge: isDarkMode 
+            ? 'bg-blue-500/20 text-blue-400 border-blue-500/30' 
+            : 'bg-blue-100 text-blue-700 border-blue-300',
+          gradient: isDarkMode ? 'from-blue-400 to-cyan-500' : 'from-blue-500 to-cyan-600'
+        };
+      case 'Beginner':
+        return {
+          badge: isDarkMode 
+            ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' 
+            : 'bg-yellow-100 text-yellow-700 border-yellow-300',
+          gradient: isDarkMode ? 'from-yellow-400 to-amber-500' : 'from-yellow-500 to-amber-600'
+        };
+      default:
+        return {
+          badge: isDarkMode 
+            ? 'bg-gray-500/20 text-gray-400 border-gray-500/30' 
+            : 'bg-gray-100 text-gray-700 border-gray-300',
+          gradient: isDarkMode ? 'from-gray-400 to-gray-500' : 'from-gray-500 to-gray-600'
+        };
+    }
   };
 
   // Get dynamic category names
@@ -65,7 +91,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'nextjs',
       name: 'Next.js',
       category: 'Frontend Framework',
-      level: 80,
+      level: 'Medium',
       icon: Globe,
       color: isDarkMode ? 'from-gray-400 to-gray-600' : 'from-gray-700 to-black',
       experience: '2+'
@@ -74,7 +100,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'laravel',
       name: 'Laravel',
       category: 'Backend Framework',
-      level: 95,
+      level: 'Expert',
       icon: Server,
       color: isDarkMode ? 'from-red-400 to-red-600' : 'from-red-500 to-red-700',
       experience: '2+'
@@ -83,7 +109,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'tailwind',
       name: 'Tailwind CSS',
       category: 'CSS Framework',
-      level: 80,
+      level: 'Medium',
       icon: Palette,
       color: isDarkMode ? 'from-cyan-400 to-blue-500' : 'from-cyan-500 to-blue-600',
       experience: '2+'
@@ -92,7 +118,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'javascript',
       name: 'JavaScript',
       category: 'Programming Language',
-      level: 95,
+      level: 'Expert',
       icon: Code,
       color: isDarkMode ? 'from-yellow-400 to-yellow-600' : 'from-yellow-500 to-yellow-700',
       experience: '3+'
@@ -101,7 +127,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'mysql',
       name: 'MySQL Database',
       category: 'Database',
-      level: 90,
+      level: 'Expert',
       icon: Database,
       color: isDarkMode ? 'from-blue-400 to-indigo-500' : 'from-blue-500 to-indigo-600',
       experience: '2+'
@@ -110,7 +136,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'word',
       name: 'Microsoft Word',
       category: 'Productivity Tool',
-      level: 92,
+      level: 'Expert',
       icon: FileText,
       color: isDarkMode ? 'from-blue-400 to-blue-600' : 'from-blue-500 to-blue-700',
       experience: '5+'
@@ -119,7 +145,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
       id: 'excel',
       name: 'Microsoft Excel',
       category: 'Data Analysis',
-      level: 50,
+      level: 'Beginner',
       icon: BarChart3,
       color: isDarkMode ? 'from-green-400 to-green-600' : 'from-green-500 to-green-700',
       experience: '4+'
@@ -182,7 +208,6 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
           if (entry.isIntersecting) {
             const skillId = entry.target.dataset.skillId;
             if (skillId) {
-              // Delay animasi berdasarkan index
               const index = skills.findIndex(skill => skill.id === skillId);
               setTimeout(() => {
                 setVisibleSkills(prev => new Set([...prev, skillId]));
@@ -202,13 +227,6 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
 
     return () => observer.disconnect();
   }, []);
-
-  const getSkillLevel = (level) => {
-    if (level >= 90) return { label: getSkillLevelLabel(level), color: isDarkMode ? 'text-green-400' : 'text-green-600' };
-    if (level >= 80) return { label: getSkillLevelLabel(level), color: isDarkMode ? 'text-blue-400' : 'text-blue-600' };
-    if (level >= 70) return { label: getSkillLevelLabel(level), color: isDarkMode ? 'text-yellow-400' : 'text-yellow-600' };
-    return { label: getSkillLevelLabel(level), color: isDarkMode ? 'text-gray-400' : 'text-gray-600' };
-  };
 
   const statsLabels = getStatsLabels();
 
@@ -296,7 +314,7 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             const isVisible = visibleSkills.has(skill.id);
-            const skillLevelInfo = getSkillLevel(skill.level);
+            const levelStyle = getSkillLevelStyle(skill.level);
 
             return (
               <div
@@ -346,30 +364,29 @@ const SkillsSection = ({ isDarkMode = false, currentLanguage, translations }) =>
                     {getSkillDescription(skill.id)}
                   </p>
 
-                  {/* Skill Level */}
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className={`text-sm font-medium ${skillLevelInfo.color}`}>
-                        {skillLevelInfo.label}
-                      </span>
-                      <span className={`text-sm transition-colors duration-300 ${
-                        isDarkMode ? 'text-gray-400' : 'text-gray-500'
-                      }`}>
-                        {skill.level}%
-                      </span>
-                    </div>
+                  {/* Skill Level Badge */}
+                  <div className="flex items-center justify-between">
+                    <span className={`px-3 py-1.5 rounded-lg text-sm font-semibold border transition-all duration-300 ${levelStyle.badge}`}>
+                      {skill.level}
+                    </span>
                     
-                    {/* Progress Bar */}
-                    <div className={`w-full rounded-full h-2 transition-colors duration-300 ${
-                      isDarkMode ? 'bg-slate-700' : 'bg-gray-200'
-                    }`}>
-                      <div
-                        className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
-                        style={{
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${index * 150 + 300}ms`
-                        }}
-                      ></div>
+                    {/* Visual Indicator */}
+                    <div className="flex items-center space-x-1">
+                      {[1, 2, 3].map((dot) => (
+                        <div
+                          key={dot}
+                          className={`w-2 h-2 rounded-full transition-all duration-500 ${
+                            (skill.level === 'Expert' && dot <= 3) ||
+                            (skill.level === 'Medium' && dot <= 2) ||
+                            (skill.level === 'Beginner' && dot <= 1)
+                              ? `bg-gradient-to-r ${levelStyle.gradient}`
+                              : isDarkMode ? 'bg-slate-700' : 'bg-gray-300'
+                          }`}
+                          style={{
+                            transitionDelay: isVisible ? `${index * 150 + dot * 100}ms` : '0ms'
+                          }}
+                        ></div>
+                      ))}
                     </div>
                   </div>
                 </div>

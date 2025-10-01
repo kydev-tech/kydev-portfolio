@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 import { Code2, Layers, Globe, Zap, Rocket, Clock, Heart, ArrowRight, Plus, Calendar, Sparkles, ExternalLink, Github, Monitor, Smartphone, Lock, MessageCircle } from 'lucide-react';
 
 const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) => {
@@ -29,7 +30,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       description: {
         en: 'Modern and responsive pricelist website built with React and Tailwind CSS. Features elegant design, smooth animations, and optimized performance for showcasing digital products.',
         id: 'Website pricelist modern dan responsif yang dibangun dengan React dan Tailwind CSS. Menampilkan desain elegan, animasi halus, dan performa optimal untuk menampilkan produk digital.',
-        ja: 'ReactとTailwind CSSで構築されたモダンでレスポンシブな価格表ウェブサイト。エレガントなデザイン、スムーズなアニメーション、デジタル製品を紹介するための最適化されたパフォーマンスを特徴としています。'
+        ja: 'Reactã¨Tailwind CSSã§æ§‹ç¯‰ã•ã‚ŒãŸãƒ¢ãƒ€ãƒ³ã§ãƒ¬ã‚¹ãƒãƒ³ã‚·ãƒ–ãªä¾¡æ ¼è¡¨ã‚¦ã‚§ãƒ–ã‚µã‚¤ãƒˆã€‚ã‚¨ãƒ¬ã‚¬ãƒ³ãƒˆãªãƒ‡ã‚¶ã‚¤ãƒ³ã€ã‚¹ãƒ ãƒ¼ã‚ºãªã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã€ãƒ‡ã‚¸ã‚¿ãƒ«è£½å“ã‚’ç´¹ä»‹ã™ã‚‹ãŸã‚ã®æœ€é©åŒ–ã•ã‚ŒãŸãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹ã‚’ç‰¹å¾´ã¨ã—ã¦ã„ã¾ã™ã€‚'
       },
       image: '/assets/projek/website/image.png',
       technologies: ['React', 'Tailwind CSS', 'Vite', 'Lucide Icons'],
@@ -38,7 +39,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       highlights: {
         en: ['Responsive Design', 'Fast Loading', 'Modern UI/UX', 'SEO Optimized'],
         id: ['Desain Responsif', 'Loading Cepat', 'UI/UX Modern', 'SEO Optimal'],
-        ja: ['レスポンシブデザイン', '高速読み込み', 'モダンUI/UX', 'SEO最適化']
+        ja: ['ãƒ¬ã‚¹ãƒãƒ³ã‚·ãƒ–ãƒ‡ã‚¶ã‚¤ãƒ³', 'é«˜é€Ÿèª­ã¿è¾¼ã¿', 'ãƒ¢ãƒ€ãƒ³UI/UX', 'SEOæœ€é©åŒ–']
       },
       isPrivate: false,
       isBot: false
@@ -50,7 +51,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       description: {
         en: 'Professional corporate website for PT. Dawu Ringkang Amanah showcasing company profile, services, and business solutions. Built with modern web technologies for optimal performance and user experience.',
         id: 'Website korporat profesional untuk PT. Dawu Ringkang Amanah yang menampilkan profil perusahaan, layanan, dan solusi bisnis. Dibangun dengan teknologi web modern untuk performa optimal dan pengalaman pengguna terbaik.',
-        ja: 'PT. Dawu Ringkang Amanahのプロフェッショナルなコーポレートウェブサイト。会社プロフィール、サービス、ビジネスソリューションを紹介。最適なパフォーマンスとユーザーエクスペリエンスのためにモダンなウェブ技術で構築。'
+        ja: 'PT. Dawu Ringkang Amanahã®ãƒ—ãƒ­ãƒ•ã‚§ãƒƒã‚·ãƒ§ãƒŠãƒ«ãªã‚³ãƒ¼ãƒãƒ¬ãƒ¼ãƒˆã‚¦ã‚§ãƒ–ã‚µã‚¤ãƒˆã€‚ä¼šç¤¾ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ã€ã‚µãƒ¼ãƒ“ã‚¹ã€ãƒ“ã‚¸ãƒã‚¹ã‚½ãƒªãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ç´¹ä»‹ã€‚æœ€é©ãªãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹ã¨ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚¨ã‚¯ã‚¹ãƒšãƒªã‚¨ãƒ³ã‚¹ã®ãŸã‚ã«ãƒ¢ãƒ€ãƒ³ãªã‚¦ã‚§ãƒ–æŠ€è¡“ã§æ§‹ç¯‰ã€‚'
       },
       image: '/assets/projek/website/image1.png',
       technologies: ['Laravel', 'MySql', 'Tailwind CSS'],
@@ -59,7 +60,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       highlights: {
         en: ['Corporate Design', 'Professional Layout', 'Business Solutions', 'Company Profile'],
         id: ['Desain Korporat', 'Layout Profesional', 'Solusi Bisnis', 'Profil Perusahaan'],
-        ja: ['コーポレートデザイン', 'プロフェッショナルレイアウト', 'ビジネスソリューション', '会社プロフィール']
+        ja: ['ã‚³ãƒ¼ãƒãƒ¬ãƒ¼ãƒˆãƒ‡ã‚¶ã‚¤ãƒ³', 'ãƒ—ãƒ­ãƒ•ã‚§ãƒƒã‚·ãƒ§ãƒŠãƒ«ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ', 'ãƒ“ã‚¸ãƒã‚¹ã‚½ãƒªãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³', 'ä¼šç¤¾ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«']
       },
       isPrivate: true,
       isBot: false
@@ -71,7 +72,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       description: {
         en: 'Intelligent WhatsApp bot for automated order processing at CakStore. Features interactive product catalog, automated order confirmation, and seamless customer service experience through WhatsApp messaging.',
         id: 'Bot WhatsApp pintar untuk pemrosesan order otomatis di CakStore. Fitur katalog produk interaktif, konfirmasi order otomatis, dan pengalaman layanan pelanggan yang seamless melalui pesan WhatsApp.',
-        ja: 'CakStoreの自動注文処理のためのインテリジェントなWhatsAppボット。インタラクティブな製品カタログ、自動注文確認、WhatsAppメッセージングを通じたシームレスなカスタマーサービス体験を特徴としています。'
+        ja: 'CakStoreã®è‡ªå‹•æ³¨æ–‡å‡¦ç†ã®ãŸã‚ã®ã‚¤ãƒ³ãƒ†ãƒªã‚¸ã‚§ãƒ³ãƒˆãªWhatsAppãƒœãƒƒãƒˆã€‚ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ãƒ†ã‚£ãƒ–ãªè£½å“ã‚«ã‚¿ãƒ­ã‚°ã€è‡ªå‹•æ³¨æ–‡ç¢ºèªã€WhatsAppãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ³ã‚°ã‚’é€šã˜ãŸã‚·ãƒ¼ãƒ ãƒ¬ã‚¹ãªã‚«ã‚¹ã‚¿ãƒžãƒ¼ã‚µãƒ¼ãƒ“ã‚¹ä½“é¨“ã‚’ç‰¹å¾´ã¨ã—ã¦ã„ã¾ã™ã€‚'
       },
       image: '/assets/projek/bot/image1.jpg',
       technologies: ['Node.js', 'WhatsApp API', 'JavaScript', 'Baileys'],
@@ -80,7 +81,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       highlights: {
         en: ['Auto Order', '24/7 Available', 'Interactive Menu', 'Fast Response'],
         id: ['Order Otomatis', 'Tersedia 24/7', 'Menu Interaktif', 'Respon Cepat'],
-        ja: ['自動注文', '24時間対応', 'インタラクティブメニュー', '高速応答']
+        ja: ['è‡ªå‹•æ³¨æ–‡', '24æ™‚é–“å¯¾å¿œ', 'ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ãƒ†ã‚£ãƒ–ãƒ¡ãƒ‹ãƒ¥ãƒ¼', 'é«˜é€Ÿå¿œç­”']
       },
       isPrivate: true,
       isBot: true,
@@ -99,7 +100,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       case 'id':
         return "Koleksi proyek yang mencerminkan perjalanan dan dedikasi saya dalam mengembangkan solusi digital yang inovatif dan bermakna";
       case 'ja':
-        return "革新的で意味のあるデジタルソリューションを開発する私の旅と献身を反映するプロジェクトのコレクション";
+        return "é©æ–°çš„ã§æ„å‘³ã®ã‚ã‚‹ãƒ‡ã‚¸ã‚¿ãƒ«ã‚½ãƒªãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã‚’é–‹ç™ºã™ã‚‹ç§ã®æ—…ã¨çŒ®èº«ã‚’åæ˜ ã™ã‚‹ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³";
       default:
         return "A collection of projects that reflect my journey and dedication in developing innovative and meaningful digital solutions";
     }
@@ -110,7 +111,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
       case 'id':
         return "Proyek-proyek baru akan segera hadir. Tetap ikuti perkembangan terbaru!";
       case 'ja':
-        return "新しいプロジェクトが間もなく登場します。最新情報をお楽しみに!";
+        return "æ–°ã—ã„ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãŒé–“ã‚‚ãªãç™»å ´ã—ã¾ã™ã€‚æœ€æ–°æƒ…å ±ã‚’ãŠæ¥½ã—ã¿ã«!";
       default:
         return "More projects coming soon. Stay tuned for updates!";
     }
@@ -162,7 +163,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
             <span className={`transition-colors duration-300 ${
               isDarkMode ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600'
             }`}>
-              {currentLanguage === 'id' ? 'Proyek' : currentLanguage === 'ja' ? 'プロジェクト' : 'Projects'}
+              {currentLanguage === 'id' ? 'Proyek' : currentLanguage === 'ja' ? 'ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ' : 'Projects'}
             </span>
           </h2>
           
@@ -228,13 +229,12 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
               }`}
             >
               {/* Project Image */}
-              <div className={`relative overflow-hidden ${project.isBot ? 'h-80' : 'h-64'}`}>
-                <div className={`absolute inset-0 transition-transform duration-700 ${hoveredProject === project.id ? 'scale-110' : 'scale-100'
-                  } ${project.isBot ? 'flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800' : ''}`}>
+              <div className={`relative overflow-hidden ${project.isBot ? 'h-96' : 'h-64'}`}>
+                <div className={`absolute inset-0 transition-transform duration-700 ${hoveredProject === project.id ? 'scale-110' : 'scale-100'}`}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className={`${project.isBot ? 'h-full w-auto max-w-none object-contain' : 'w-full h-full object-cover'}`}
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 
@@ -256,7 +256,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                       }`}
                     >
                       {project.isBot ? <MessageCircle size={18} /> : <ExternalLink size={18} />}
-                      <span>{project.isBot ? (currentLanguage === 'id' ? 'Chat' : currentLanguage === 'ja' ? 'チャット' : 'Chat') : (currentLanguage === 'id' ? 'Lihat' : currentLanguage === 'ja' ? '表示' : 'View')}</span>
+                      <span>{project.isBot ? (currentLanguage === 'id' ? 'Chat' : currentLanguage === 'ja' ? 'ãƒãƒ£ãƒƒãƒˆ' : 'Chat') : (currentLanguage === 'id' ? 'Lihat' : currentLanguage === 'ja' ? 'è¡¨ç¤º' : 'View')}</span>
                     </a>
                     {project.githubUrl ? (
                       <a
@@ -281,7 +281,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                         }`}
                       >
                         <Lock size={18} />
-                        <span>{currentLanguage === 'id' ? 'Privat' : currentLanguage === 'ja' ? 'プライベート' : 'Private'}</span>
+                        <span>{currentLanguage === 'id' ? 'Privat' : currentLanguage === 'ja' ? 'ãƒ—ãƒ©ã‚¤ãƒ™ãƒ¼ãƒˆ' : 'Private'}</span>
                       </div>
                     )}
                   </div>
@@ -298,14 +298,14 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                       <>
                         <Zap size={14} className={isDarkMode ? 'text-purple-400' : 'text-purple-500'} />
                         <span className={`text-xs font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
-                          {currentLanguage === 'id' ? 'Bot AI' : currentLanguage === 'ja' ? 'ボットAI' : 'Bot AI'}
+                          {currentLanguage === 'id' ? 'Bot AI' : currentLanguage === 'ja' ? 'ãƒœãƒƒãƒˆAI' : 'Bot AI'}
                         </span>
                       </>
                     ) : (
                       <>
                         <Globe size={14} className={isDarkMode ? 'text-blue-400' : 'text-blue-500'} />
                         <span className={`text-xs font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
-                          {currentLanguage === 'id' ? 'Web App' : currentLanguage === 'ja' ? 'ウェブアプリ' : 'Web App'}
+                          {currentLanguage === 'id' ? 'Web App' : currentLanguage === 'ja' ? 'ã‚¦ã‚§ãƒ–ã‚¢ãƒ—ãƒª' : 'Web App'}
                         </span>
                       </>
                     )}
@@ -352,7 +352,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                     }`}>
                       <Lock size={12} className={isDarkMode ? 'text-amber-400' : 'text-amber-600'} />
                       <span className={`text-xs font-medium ${isDarkMode ? 'text-amber-300' : 'text-amber-600'}`}>
-                        {currentLanguage === 'id' ? 'Privat' : currentLanguage === 'ja' ? 'プライベート' : 'Private'}
+                        {currentLanguage === 'id' ? 'Privat' : currentLanguage === 'ja' ? 'ãƒ—ãƒ©ã‚¤ãƒ™ãƒ¼ãƒˆ' : 'Private'}
                       </span>
                     </div>
                   </div>
@@ -422,7 +422,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                     }`}
                   >
                     {project.isBot ? <MessageCircle size={16} /> : <ExternalLink size={16} />}
-                    <span>{project.isBot ? (currentLanguage === 'id' ? 'Chat di WhatsApp' : currentLanguage === 'ja' ? 'WhatsAppでチャット' : 'Chat on WhatsApp') : (currentLanguage === 'id' ? 'Lihat Live' : currentLanguage === 'ja' ? 'ライブ表示' : 'View Live')}</span>
+                    <span>{project.isBot ? (currentLanguage === 'id' ? 'Chat di WhatsApp' : currentLanguage === 'ja' ? 'WhatsAppã§ãƒãƒ£ãƒƒãƒˆ' : 'Chat on WhatsApp') : (currentLanguage === 'id' ? 'Lihat Live' : currentLanguage === 'ja' ? 'ãƒ©ã‚¤ãƒ–è¡¨ç¤º' : 'View Live')}</span>
                     <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
                   {project.githubUrl ? (
@@ -443,7 +443,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                       isDarkMode ? 'text-gray-500' : 'text-gray-400'
                     }`}>
                       <Lock size={16} />
-                      <span>{currentLanguage === 'id' ? 'Repositori Privat' : currentLanguage === 'ja' ? 'プライベートリポジトリ' : 'Private Repository'}</span>
+                      <span>{currentLanguage === 'id' ? 'Repositori Privat' : currentLanguage === 'ja' ? 'ãƒ—ãƒ©ã‚¤ãƒ™ãƒ¼ãƒˆãƒªãƒã‚¸ãƒˆãƒª' : 'Private Repository'}</span>
                     </div>
                   )}
                 </div>
@@ -501,11 +501,11 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
               <h3 className={`text-4xl md:text-5xl font-bold mb-4 transition-colors duration-300 ${
                 isDarkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                {currentLanguage === 'id' ? 'Lebih Banyak' : currentLanguage === 'ja' ? 'もっと' : 'More'}{' '}
+                {currentLanguage === 'id' ? 'Lebih Banyak' : currentLanguage === 'ja' ? 'ã‚‚ã£ã¨' : 'More'}{' '}
                 <span className={`transition-colors duration-300 ${
                   isDarkMode ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-600'
                 }`}>
-                  {currentLanguage === 'id' ? 'Segera Hadir' : currentLanguage === 'ja' ? '近日公開' : 'Coming Soon'}
+                  {currentLanguage === 'id' ? 'Segera Hadir' : currentLanguage === 'ja' ? 'è¿‘æ—¥å…¬é–‹' : 'Coming Soon'}
                 </span>
               </h3>
 
@@ -523,7 +523,7 @@ const ProjectSection = ({ isDarkMode = false, currentLanguage, translations }) =
                 <span className={`text-sm font-medium transition-colors duration-300 ${
                   isDarkMode ? 'text-blue-300' : 'text-blue-600'
                 }`}>
-                  {currentLanguage === 'id' ? 'Proyek baru dalam pengembangan' : currentLanguage === 'ja' ? '新しいプロジェクトを開発中' : 'New projects in development'}
+                  {currentLanguage === 'id' ? 'Proyek baru dalam pengembangan' : currentLanguage === 'ja' ? 'æ–°ã—ã„ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’é–‹ç™ºä¸­' : 'New projects in development'}
                 </span>
               </div>
             </div>
