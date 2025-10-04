@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kydev.my.id/sitemap.xml
+Sitemap: https://www.kydev.my.id/sitemap
